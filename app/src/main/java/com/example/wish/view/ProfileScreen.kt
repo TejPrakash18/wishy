@@ -1,19 +1,20 @@
 package com.example.wish.view
 
 import android.content.Context
-import android.content.SharedPreferences
+
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.createBitmap
+
 import com.example.wish.R
 import com.example.wish.databinding.FragmentProfileScreenBinding
 
@@ -40,6 +41,7 @@ class ProfileScreen : Fragment() {
         val letterBitmap = createLetterBitmap(firstLetter)
         binding.userImage.setImageBitmap(letterBitmap)
 
+//        Log.d("Tag", "finally here")
 
         return binding.root
     }
@@ -50,9 +52,9 @@ class ProfileScreen : Fragment() {
     }
 
 
-    fun createLetterBitmap(letter:String):Bitmap  {
-        val width = 120
-        val height = 120
+    private fun createLetterBitmap(letter:String):Bitmap  {
+        val width = 80
+        val height = 80
 
         val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
@@ -61,7 +63,7 @@ class ProfileScreen : Fragment() {
         paint.isAntiAlias = true
         canvas.drawCircle(width/2f, height/2f, width/2f, paint)
         paint.color = Color.WHITE
-        paint.textSize = 60f
+        paint.textSize = 40f
         paint.typeface = Typeface.DEFAULT_BOLD
         paint.textAlign = Paint.Align.CENTER
 
