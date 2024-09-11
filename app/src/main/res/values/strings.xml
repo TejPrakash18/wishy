@@ -11,5 +11,7 @@
     <string name="banner">banner</string>
     <string name="theme">Theme</string>
     <string name="version">Version</string>
+    <string name="private_policy">Private Policy</string>
+    <string name="about">About</string>
 
 </resources>
