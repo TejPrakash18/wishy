@@ -9,4 +9,7 @@
     <string name="next">Next</string>
     <string name="wish_quotes">Wish a Happy Birthday \n\u00A0\u00A0\u00A0\u00A0\u00A0the right way</string>
     <string name="banner">banner</string>
+    <string name="theme">Theme</string>
+    <string name="version">Version</string>
+
 </resources>
